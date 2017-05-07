@@ -10,13 +10,15 @@ import UIKit
 
 class ResultViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
+    //受け取るためのプロパティを宣言しておく
+    var name:String = ""
+
     @IBAction func handle(_ sender: AnyObject) {
-        label.text = "こんにちは、 name　さん"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        label.text = "こんにちは、\(name)さん"
     }
 
     override func didReceiveMemoryWarning() {
